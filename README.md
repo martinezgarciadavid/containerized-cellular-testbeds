@@ -1,4 +1,4 @@
-# _Containerlab_ testbeds for cellular mobile communications networks
+# _Containerlab_ scenarios for cellular mobile communications networks
 
 ## Acknowledgements
 
