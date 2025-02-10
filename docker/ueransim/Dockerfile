@@ -45,12 +45,12 @@ RUN echo 'Pin: release o=LP-PPA-mozillateam' >> /etc/apt/preferences.d/mozilla-f
 RUN echo 'Pin-Priority: 1001' >> /etc/apt/preferences.d/mozilla-firefox
 RUN apt update && apt install -y firefox
 
-# Download and extract cmake source code (latest stable version as of March 21, 2023: 3.26.0)
-RUN wget https://github.com/Kitware/CMake/releases/download/v3.26.0/cmake-3.26.0.tar.gz
-RUN tar -xzf cmake-3.26.0.tar.gz
+# Download and extract cmake source code (latest stable version as of February 10th, 2025: 3.31.5)
+RUN wget https://github.com/Kitware/CMake/releases/download/v3.31.5/cmake-3.31.5.tar.gz
+RUN tar -xzf cmake-3.31.5.tar.gz
 
 # Build cmake from source code.
-WORKDIR /cmake-3.26.0
+WORKDIR /cmake-3.31.5
 RUN ./bootstrap && make && make install
 
 # Clone and build UERANSIM from its GitHub repository.
